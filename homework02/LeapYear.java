@@ -20,14 +20,14 @@ public class LeapYear {
 		System.out.println("년도를 입력하세요:");
 		year = sc.nextInt();
 		
-		diciple = (year % 4==0 && year %100 !=0) || (year % 400 ==0) ? "윤년" : "평년" ;
+//		diciple = (year % 4==0 && year %100 !=0) || (year % 400 ==0) ? "윤년" : "평년" ;
 		
-//		if(year%4==0 && year%400==0) {
-//			diciple = "윤년입니다.";
-//		}else if(year%100==0) {
-//			diciple = "평년입니다";
-//		}
-//		
+		if(year%4==0 && year%100!=0 || year % 400==0) {
+			diciple = "윤년입니다.";
+		}else {
+			diciple = "평년입니다";
+		}
+		
 		System.out.printf("입력하신 %d년은 %s",year,diciple);
 		
 		

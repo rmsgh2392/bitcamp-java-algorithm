@@ -17,8 +17,7 @@ public class ArithmeticCalculator {
 Scanner sc = new Scanner(System.in);
 		
 		int rvalue,lvalue,result =0;
-		int mok = 0;
-		int nam = 0;
+	
 		String op ;
 		
 		System.out.println("사칙연산 계산기 1.덧셈 2.뺼셈 3.곱셈 4.나누기");
@@ -34,14 +33,14 @@ Scanner sc = new Scanner(System.in);
 				break;
 		case "*": result = lvalue*rvalue;
 				break;
-		case "/": mok = lvalue/rvalue; nam =lvalue%rvalue;
+		case "/": result = lvalue/rvalue; 
 				break;
 		default :
 				System.out.println("다시 입력해주세여");
 				break;
 		}
 		if(op.equals("/")) {
-			System.out.printf("%d %s %d = %d[%d]",lvalue,op,rvalue,mok,nam);
+			System.out.printf("%d %s %d = %d[%d]",lvalue,op,rvalue,result,lvalue%rvalue);
 		}else {
 			System.out.printf("%d %s %d = %d",lvalue,op,rvalue,result);
 		}

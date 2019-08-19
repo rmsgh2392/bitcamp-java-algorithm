@@ -24,17 +24,10 @@ public class BMI {
 		Scanner scanner = new Scanner(System.in);
 		String val;
 		System.out.println("몸무게 입력");
-		int weight = scanner.nextInt();
+		double weight = scanner.nextDouble();
 		System.out.println("키 입력");
-		int height = scanner.nextInt();
-		double a = weight / ((height*0.01)*(height*0.01));
-		double b = a*100;
-		double c =Math.round(b);
-		double bmi = c/100.0;
-		System.out.println(bmi);
-		
-		
-		
+		double height = scanner.nextDouble();
+		double bmi = weight / ((height*0.01)*(height*0.01));
 		
 		
 		if(bmi >30) {

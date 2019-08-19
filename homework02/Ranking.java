@@ -23,7 +23,7 @@ C 선수 기록 : 10.1초
 라고 출력시켜주세요.
 
  * @author user
- *
+
  */
 public class Ranking {
 

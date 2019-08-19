@@ -37,7 +37,7 @@ public class ScoreCalc {
 		int avg = 0;
 		
 		while (true) {
-			System.out.print("더하시고 싶은 수를 입력하세요 \n>");
+			System.out.print("더하시고 싶은 수를 입력하세요.(종료는 -1) \n>");
 			int number = scan.nextInt();
 			if(number == -1) {
 				sequence = sequence.substring(0,sequence.length()-1);
