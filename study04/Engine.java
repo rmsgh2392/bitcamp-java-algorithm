@@ -22,15 +22,15 @@ public class Engine {
 				case 2: System.out.println("2.이해못할문제");
 					//이름 , 주소 , 나이, 은행잔고, 신용도
 					//결과가 뭘 넣든간데 1억 대출
-					name = sc.next();
-					String adress = sc.next();
-					int age = sc.nextInt();
-					int money = sc.nextInt();
-					String credit = sc.next();
+				name = sc.next();
+				String adress = sc.next();
+				int age = sc.nextInt();
+				int money = sc.nextInt();
+				String credit = sc.next();
 					
-					result = student.daechul(name,adress,age,money,credit);
-					System.out.println(result);
-					break;
+				result = student.daechul(name,adress,age,money,credit);
+				System.out.println(result);
+				break;
 				
 				}
 			}

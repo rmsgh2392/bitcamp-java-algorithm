@@ -23,7 +23,7 @@ total = total - dc;
 import java.util.Scanner;
 public class HowMuch {
 	public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
+Scanner sc = new Scanner(System.in);
 		
 		int dc ,total=0;
 		
