@@ -11,6 +11,28 @@ package homework02;
 평년이라 해도 다시 400으로 나눠 떨어지는 연도는 윤년이다.
 예시) 2000년 과 2016 년을 입력하면 윤년으로 나옴
 */
+import java.util.Scanner;
 public class LeapYear {
-
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int year ;
+		String diciple = "";
+		System.out.println("년도를 입력하세요:");
+		year = sc.nextInt();
+		
+		diciple = (year % 4==0 && year %100 !=0) || (year % 400 ==0) ? "윤년" : "평년" ;
+		
+//		if(year%4==0 && year%400==0) {
+//			diciple = "윤년입니다.";
+//		}else if(year%100==0) {
+//			diciple = "평년입니다";
+//		}
+//		
+		System.out.printf("입력하신 %d년은 %s",year,diciple);
+		
+		
+		
+		
+		
+	}
 }

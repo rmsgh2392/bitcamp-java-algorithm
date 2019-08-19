@@ -24,11 +24,34 @@ package homework02;
  * @author user
  *
  */
+import java.util.Scanner; 
 public class ScoreCalc {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Scanner scan = new Scanner(System.in);
+		System.out.println("========무한 덧셈 계산기=======");
+		
+		
+		String sequence = "";
+		int series = 0;
+		int avg = 0;
+		
+		while (true) {
+			System.out.print("더하시고 싶은 수를 입력하세요 \n>");
+			int number = scan.nextInt();
+			if(number == -1) {
+				sequence = sequence.substring(0,sequence.length()-1);
+				System.out.printf("현재까지 누적 값 %s = %d 이고 ,평균은 %d입니다",sequence,series,series/avg);
+				break;
+			
+			}
+			series += number;
+			sequence += number +"+";
+			avg +=1;
+			
+		
+		
+		}
 	}
 
 }
