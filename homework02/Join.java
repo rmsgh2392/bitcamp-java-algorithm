@@ -31,11 +31,42 @@ package homework02;
  * @author user
  *
  */
+import java.util.Scanner;
 public class Join {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Scanner sc = new Scanner(System.in);
+		String [] membership = {"ID","name","year","gen","blt","password"};
+		double height=0 , weight =0;
+		
+		System.out.println("여기는 비트헬스입니다.\n=====회원가입=====");
+		System.out.print("아이디 :");
+		membership[0] = sc.next();
+		System.out.print("비밀번호:");
+		membership[5] = sc.next();
+		System.out.print("이름 :");
+		membership[1] = sc.next();
+		System.out.print("생년월일 (예) 1908-01-01 ");
+		membership[2] = sc.next();
+		System.out.print("성인여부 :");
+		membership[3] = sc.next();
+		System.out.print("키(소수점 첫째자리까지)");
+		height = sc.nextDouble();
+		System.out.print("몸무게(소수점 첫째자리까지)");
+		weight = sc.nextDouble();
+		System.out.println("혈액형 :");
+		membership[4] = sc.next();
+		
+		
+		System.out.println("====회원정보====");
+		
+		if(membership[3].equals("성인")) {
+			System.out.printf("아이디 : %s\n비밀번호 : %s\n이름: %s\n생년월일: %s\n성인여부: %s\n키: %.1f\n몸무게: %.1f\n혈액형 :%s"
+					,membership[0],membership[5],membership[1],membership[2],membership[3],height,weight,membership[4]);
+		}else if(membership[3].equals("미성년")){
+			System.out.printf("아이디 : %s\n비밀번호 : %s\n이름: %s\n생년월일: %s\n성인여부: %s\n키: %.1f\n몸무게: %.1f\n혈액형 :%s"
+					,membership[0],membership[5],membership[1],membership[2],membership[3],height,weight,membership[4]);
+		}
 	}
 
 }

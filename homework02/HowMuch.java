@@ -20,6 +20,26 @@ package homework02;
 int dc = total / 10;
 total = total - dc;
 */
+import java.util.Scanner;
 public class HowMuch {
-
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int dc ,total=0;
+		
+		
+		System.out.println("How much muchine");
+		System.out.println("얼마입니까 ?");
+		int money = sc.nextInt();
+		System.out.printf("%d원 입니다\n",money);
+		System.out.println("몇 개나 드릴까여?");
+		int number = sc.nextInt();
+		total = money * number;
+		System.out.printf("총 금액은 %d입니다\n 비싸요 깎아주세요.",total);
+		System.out.println("얼마나 깎아드릴까여 ?(10%)");
+		dc = sc.nextInt();
+		
+		System.out.printf("그럼 %d원만 주세요",total*(100-dc)/100);
+		
+		}
 }

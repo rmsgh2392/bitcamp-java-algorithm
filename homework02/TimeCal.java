@@ -8,10 +8,21 @@ package homework02;
  * @author user
  *
  */
+import java.util.Scanner;
 public class TimeCal {
 
 	public static void main(String[] args) {
-
+		Scanner scan = new Scanner(System.in);
+		System.out.println("초를 입력해주세요 :");
+		int sec = scan.nextInt();
+		int min =sec/60;
+		int hour = min/60;
+		sec = sec%60;
+		min = min % 60;
+		
+		
+		
+		System.out.printf("%d시간 %d분 %d초 입니다",hour,min,sec);
 	}
 
 }
