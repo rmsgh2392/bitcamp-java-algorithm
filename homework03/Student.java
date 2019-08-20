@@ -3,10 +3,11 @@ package homework03;
 import java.util.Scanner;
 
 public class Student {
-	public String getAc(int rvalue,int lvalue,String op) {
+		Scanner sc = new Scanner(System.in);
+		public String getAc(int rvalue,int lvalue,String op) {
 		
 		int sum =0;
-			
+		String val = "";
 		switch(op) {
 		case "+": sum = lvalue+rvalue;
 				break;
@@ -22,12 +23,13 @@ public class Student {
 				
 		}
 		if(op.equals("/")) {
-			return String.format("%d %s %d = %d[%d]",lvalue,op,rvalue,sum,lvalue%rvalue);
+			val = String.format("%d %s %d = %d[%d]",lvalue,op,rvalue,sum,lvalue%rvalue);
 		}else {
-			return String.format("%d %s %d = %d",lvalue,op,rvalue,sum);
+			val =  String.format("%d %s %d = %d",lvalue,op,rvalue,sum);
 		}
+		return val;
 		}
-	public String getBmi(String name,double weight,double height) {
+		public String getBmi(String name,double weight,double height) {
 		String val;
 		double bmi = weight / ((height*0.01)*(height*0.01));
 		
@@ -74,7 +76,7 @@ public class Student {
 //		}
 //	}
 //	
-//		
+		
 	
 	public String getLeapYear(int year) {
 		String diciple = "";
@@ -92,15 +94,67 @@ public class Student {
 		
 		
 	}
-	public void getMonthEndDay(int month) {
-		
-		
+	public String getMonthEndDay(int month) {
+		String date ="";
+		switch(month){
+		case 1: case 3: case 5: case 7:
+		case 8: case 10: case 12:
+			date  = "31일 까지 있습니다"; break;
+		case 4: case 6: case 9: case 11:
+			date = "30일까지 있습니다"; break;
+		default : date = "28일까지 있습니다.(운년이면 29일까지 있습니다.)";
+			break;
+		}
+		 String result = String.format("입력하신 %d월은 %s",month,date);
+		 return result;
 	}
-	public void passorfail() {}
-	public void getRanking() {}
-	public void getReportCard() {}
+	public String passorfail(String name,int korsc,int engsc,int mathsc) {
+		
+		int sum = 0 , avg =0;
+		String val = "";
+		sum = korsc + engsc + mathsc;
+		avg = sum /3;
+		
+		if(avg <70) {
+			val = "불합격";
+		}else if(avg>=70 && avg <90) {
+			val = "합격";
+		}else if (avg >=90) {
+			val = "장학생";
+		}
+		
+		String result = String.format("%s \t %d \t %d \t %d \t %d \t %d \t %s%n"
+				,name,korsc,engsc,mathsc,sum,avg,val);
+		
+		
+		return result;
+	}
+	public void getRanking() {
+	}
+	public String getReportCard(String name,int korsc,int engsc,int mathsc) {
+		int sum = korsc + engsc + mathsc;
+		int avg = sum / 3;
+		String val = "";
+		if(avg<70) {
+			val = "불합격";
+		}else if(avg>=10 && avg <90) {
+			val = "합격";
+		}else if(avg >=90) {
+			val = "장학생";
+		}
+		
+		String result = String.format("%s \t %d \t %d \t %d \t %d \t %d \t %s%n",name,korsc,engsc,mathsc,sum,avg,val);
+		return result;
+	}
 	public void getScoreCal() {}
-	public void getTax() {}
+	public String getTax(int anincome,String name) {
+		
+		double rate = 9.7;
+		double tax = anincome * rate*0.01;
+		
+		String result = String.format("%d만원 연봉을 받으시는 %s님 께서 내실 세금은 %.1f입니다.",anincome,name,tax);
+		return result;
+	}
 	public void getTime() {}
 	
 }

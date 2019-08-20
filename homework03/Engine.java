@@ -17,12 +17,12 @@ public class Engine {
 			case 1: System.out.println("사칙연산 계산기 1.덧셈 2.뺼셈 3.곱셈 4.나누기");
 					System.out.println("연산 하고 싶은 두 수를 입력하세요");
 					
-					int rvalue = sc.nextInt();
 					int lvalue = sc.nextInt();
+					int rvalue = sc.nextInt();
 					String op = sc.next();
 					
-				String result = s.getAc(rvalue,lvalue,op);
-				System.out.println(result);
+				String val = s.getAc(rvalue,lvalue,op);
+				System.out.println(val);
 				break;
 			case 2:System.out.println("2.BMI");
 					System.out.println("이름 ,몸무게,키입력(175->1.75) :");
@@ -31,9 +31,9 @@ public class Engine {
 					double height = sc.nextDouble();
 			
 			
-					result = s.getBmi(name,weight,height);
+					String result = s.getBmi(name,weight,height);
 					System.out.println(result);
-				break;
+					break;
 			case 3: System.out.println("3.HowMuch");
 					System.out.println("차례대로 가격 , 개수 ,");
 					int price = sc.nextInt();
@@ -69,7 +69,55 @@ public class Engine {
 					int year = sc.nextInt();
 					result = s.getLeapYear(year);
 					System.out.println(result);
-			}
+					break;
+			case 6: System.out.println("6.MonthEndDay(입력하신 월이 몇일까지 있는지)");
+					int month = sc.nextInt();
+					result = s.getMonthEndDay(month);
+					System.out.println(result);
+					break;
+			case 7: System.out.println("7.PassOrFail");
+			
+					System.out.println("학생 이름 입력 :");
+					name = sc.next();
+					System.out.println("점수를 차례대로 입력하세여 1.국어2.영어3.수학");
+					int korsc = sc.nextInt();
+					int engsc = sc.nextInt();
+					int mathsc = sc.nextInt();		
+					System.out.println("학생 \t 국어 \t 영어 \t 수학 \t 총점 \t 평균 \t 합격여부");
+					System.out.println("============================================");
+					result = s.passorfail(name,korsc,engsc,mathsc);
+					System.out.println(result);
+					break;
+
+			case 8: System.out.println("8.Ranking(A선수 B선수 C선수 기록 등수 매기기)");
+					System.out.println();
+					
+					s.getRanking();
+					break;
+			case 9: System.out.println("ReportCard");
+					System.out.println("학생 이름 입력 :");
+					name = sc.next();
+					System.out.println("1.국어2.영어3.수학 차례대로 점수를 입력하세여:");
+					korsc = sc.nextInt();
+					engsc = sc.nextInt();
+					mathsc = sc.nextInt();
+					System.out.println("학생 \t 국어 \t 영어 \t 수학 \t 총점 \t 평균 \t 합격여부");
+					System.out.println("============================================");
+					result = s.getReportCard(name,korsc,engsc,mathsc);
+					System.out.println(result);
+					break;
+			case 10: System.out.println("ScoreCal");
+			
+			
+			case 11: System.out.println("Tax (세금내는 프로그램)");
+					System.out.println("사용자의 연봉과 이름을 각각 입력해주세요>");
+					int anincome = sc.nextInt();
+					name = sc.next();
+					result = s.getTax(anincome,name);
+					System.out.println(result);
+			}		
+			
+			
 		}
 	}
 
