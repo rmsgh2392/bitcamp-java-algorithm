@@ -47,7 +47,7 @@ public class Engine {
 				System.out.println("아이디,이름을 입력하면 주민번호 알려줌");
 				String searchName = sc.next();
 				String searchId = sc.next();
-				if(searchName.contentEquals("a")&&searchId.equals("a")){
+				if(searchName.equals(member.getName())&&searchId.equals(member.getId())){
 					System.out.printf("찾는 아이디 : %s\n"
 							+ "주민번호: %s\n",member.getId(),member.getYear());
 						
