@@ -1,4 +1,4 @@
-package study05;
+package study06.copy;
 
 public class Member {
 	private String name,id,pass,year,blood;

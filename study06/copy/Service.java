@@ -1,4 +1,4 @@
-package study05;
+package study06.copy;
 
 public class Service {
 	public String getBmi(Member member) {

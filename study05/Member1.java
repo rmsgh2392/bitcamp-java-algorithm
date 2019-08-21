@@ -71,4 +71,32 @@ public class Member1 {
 	public int getScince() {
 		return this.scince;
 	}
-}
+	public void setSport(int sport) {
+		this.sport = sport;
+	}
+	public int getport() {
+		return this.sport;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getPrice() {
+		return this.price ;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return String.format("회원정보 :\n"
+				+ "이름 :%s \n"
+				+ "아이디 : %s \n"
+				+ "비밀번호 : %s \n"
+				+ "주민번호 : %s \n"
+				+ "키 : %.1f \n"
+				+ "몸무게 : %.1f"
+				,name,Id,pw,ssn,cm,kg);
+	}
+	
+	
+	
+}	

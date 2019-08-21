@@ -1,9 +1,9 @@
-package study05;
+package homework04_member;
 
 public class Member {
 	private String name,id,pass,year,blood;
 	private double height,weight;
-	private int kor,eng,math,salary;
+	private int salary;
 	
 	public void setName(String name) {
 		this.name = name; 
@@ -59,24 +59,7 @@ public class Member {
 	public double getWeight() {
 		return this.weight = weight;
 	}
-	public void setKor(int kor) {
-		this.kor = kor;
-	}
-	public int getKor() {
-		return this.kor;
-	}
-	public void setEng(int eng) {
-		this.eng = eng;
-	}
-	public int getEng() {
-		return this.eng;
-	}
-	public void setMath(int math) {
-		this.math = math;
-	}
-	public int getMath() {
-		return this.math;
-	}
+
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
